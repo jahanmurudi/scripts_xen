@@ -7,10 +7,10 @@ COMMIT="7ccb488f8752a69f41f820a44ce618e3d3b8fb4f"
 
 # Clone the Xen repository with full history to access specific commit
 echo "Cloning Xen repository from custom fork..."
-git clone --branch $BRANCH $REPO_URL xen-$BRANCH
+git clone --branch $BRANCH $REPO_URL $BRANCH
 
 # Navigate into the cloned repository
-cd xen-$BRANCH || { echo "Failed to enter directory"; exit 1; }
+cd $BRANCH || { echo "Failed to enter directory"; exit 1; }
 
 # Checkout the specific commit
 echo "Checking out specific commit: $COMMIT"
